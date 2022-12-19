@@ -41,12 +41,11 @@ public class EmployeeAdapter  extends RecyclerView.Adapter<EmployeeAdapter.ViewH
         EmployeeData data = items.get(position);
 
         Glide.with(context)
-                .load(data.getEmployeeAdharImg());
+                .load(data.getEmployeeAdharImg())
+                .into(holder.AdharImage);
 
         holder.Employee_Name.setText(data.getEmployeeName());
         holder.Employee_Address.setText(data.getEmployeeAddress());
-
-
     }
 
     @Override
